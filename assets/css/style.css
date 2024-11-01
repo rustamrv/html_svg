@@ -115,7 +115,7 @@ footer {
   height: 40px;
 }
 
-.icons svg:hover path {
-  fill: #52c29d;
+footer .icon:hover use {
   color: #52c29d;
+  fill: #52c29d;
 }
