@@ -46,9 +46,10 @@ ul {
   margin-top: 40px;
 }
 
-ul li {
+/* ul li {
   flex: 1;
-}
+} */
+
 main .item {
   display: flex;
   flex-direction: column;
@@ -58,7 +59,6 @@ main .item {
   background: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .item .icon {
   border-radius: 8px;
   border: 1px solid #e5eaf4;
@@ -68,7 +68,38 @@ main .item {
   height: 64px;
   padding: 14px 12px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.item .icon .blue,
+.item .icon .green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 14px;
+  padding-top: 12px;
+}
+
+.item .icon .l-blue,
+.item .icon .l-green {
+  padding-left: 18px;
+}
+
+.item .icon .blue {
+  opacity: 1;
+}
+
+.item .icon .green {
+  opacity: 0;
+}
+
+.item:hover .icon .blue {
+  opacity: 0;
+}
+
+.item:hover .icon .green {
+  opacity: 1;
 }
 
 main .item a {
@@ -103,19 +134,20 @@ footer {
   padding-right: 135px;
 }
 
-.icons {
-  margin-top: 40px;
+.social-icons {
   display: flex;
+  list-style: none;
   gap: 10px;
+
+  padding: 0;
+  margin-top: 40px;
 }
 
-.icons svg {
-  background: #efeef3;
-  width: 40px;
-  height: 40px;
+.social-icons .icon {
+  width: 24px;
+  height: 24px;
 }
 
-footer .icon:hover use {
-  color: #52c29d;
+.social-icons .icon:hover path {
   fill: #52c29d;
 }
